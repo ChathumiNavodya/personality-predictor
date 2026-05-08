@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personality Predictor</title>
+</head>
+<body>
+    <h1>Introvert / Extrovert Predictor</h1>
+
+    <form method="POST">
+        <label>Time Spent Alone:</label>
+        <input type="number" name="Time_spent_Alone" required><br><br>
+
+        <label>Stage Fear:</label>
+        <select name="Stage_fear">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br><br>
+
+        <label>Social Event Attendance:</label>
+        <input type="number" name="Social_event_attendance" required><br><br>
+
+        <label>Going Outside:</label>
+        <input type="number" name="Going_outside" required><br><br>
+
+        <label>Drained After Socializing:</label>
+        <select name="Drained_after_socializing">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br><br>
+
+        <label>Friends Circle Size:</label>
+        <input type="number" name="Friends_circle_size" required><br><br>
+
+        <label>Post Frequency:</label>
+        <input type="number" name="Post_frequency" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
